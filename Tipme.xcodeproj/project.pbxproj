@@ -14,6 +14,9 @@
 		0B0ACD911D976C4F00801AC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B0ACD8F1D976C4F00801AC7 /* LaunchScreen.storyboard */; };
 		0B0ACD9C1D976C4F00801AC7 /* TipmeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0ACD9B1D976C4F00801AC7 /* TipmeTests.swift */; };
 		0B0ACDA71D976C4F00801AC7 /* TipmeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0ACDA61D976C4F00801AC7 /* TipmeUITests.swift */; };
+		0B87CDFA1D977EBE00E7D52A /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B87CDF91D977EBE00E7D52A /* SettingViewController.swift */; };
+		0BF23DAD1D993FFE00F0518B /* person-icon-blue.ico in Resources */ = {isa = PBXBuildFile; fileRef = 0BF23DAC1D993FFE00F0518B /* person-icon-blue.ico */; };
+		0BF23DB11D9975F100F0518B /* DoubleAsLocaleCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF23DB01D9975F100F0518B /* DoubleAsLocaleCurrency.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		0B0ACDA21D976C4F00801AC7 /* TipmeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TipmeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B0ACDA61D976C4F00801AC7 /* TipmeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipmeUITests.swift; sourceTree = "<group>"; };
 		0B0ACDA81D976C4F00801AC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B87CDF91D977EBE00E7D52A /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		0BF23DAC1D993FFE00F0518B /* person-icon-blue.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = "person-icon-blue.ico"; sourceTree = "<group>"; };
+		0BF23DB01D9975F100F0518B /* DoubleAsLocaleCurrency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DoubleAsLocaleCurrency.swift; path = Extensions/DoubleAsLocaleCurrency.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +105,13 @@
 			children = (
 				0B0ACD861D976C4F00801AC7 /* AppDelegate.swift */,
 				0B0ACD881D976C4F00801AC7 /* ViewController.swift */,
+				0B87CDF91D977EBE00E7D52A /* SettingViewController.swift */,
 				0B0ACD8A1D976C4F00801AC7 /* Main.storyboard */,
+				0BF23DAC1D993FFE00F0518B /* person-icon-blue.ico */,
 				0B0ACD8D1D976C4F00801AC7 /* Assets.xcassets */,
 				0B0ACD8F1D976C4F00801AC7 /* LaunchScreen.storyboard */,
 				0B0ACD921D976C4F00801AC7 /* Info.plist */,
+				0BF23DB01D9975F100F0518B /* DoubleAsLocaleCurrency.swift */,
 			);
 			path = Tipme;
 			sourceTree = "<group>";
@@ -233,6 +242,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B0ACD911D976C4F00801AC7 /* LaunchScreen.storyboard in Resources */,
+				0BF23DAD1D993FFE00F0518B /* person-icon-blue.ico in Resources */,
 				0B0ACD8E1D976C4F00801AC7 /* Assets.xcassets in Resources */,
 				0B0ACD8C1D976C4F00801AC7 /* Main.storyboard in Resources */,
 			);
@@ -260,7 +270,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B0ACD891D976C4F00801AC7 /* ViewController.swift in Sources */,
+				0BF23DB11D9975F100F0518B /* DoubleAsLocaleCurrency.swift in Sources */,
 				0B0ACD871D976C4F00801AC7 /* AppDelegate.swift in Sources */,
+				0B87CDFA1D977EBE00E7D52A /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,6 +515,7 @@
 				0B0ACDAD1D976C4F00801AC7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0B0ACDAE1D976C4F00801AC7 /* Build configuration list for PBXNativeTarget "TipmeTests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +524,7 @@
 				0B0ACDB01D976C4F00801AC7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0B0ACDB11D976C4F00801AC7 /* Build configuration list for PBXNativeTarget "TipmeUITests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +533,7 @@
 				0B0ACDB31D976C4F00801AC7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

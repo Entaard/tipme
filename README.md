@@ -41,7 +41,11 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+As I build the app, I ran into the following challenges:
+- Big changes from swift 2 to swift 3, so it's hard for me to make research, because many explanations found on stackoverflow, or even on Apple's site, was on swift 2.
+- Was unable to make UI scrollup when keypad appears.
+- Was unable to make format right in text field. For example, while user is inputing the bill, they still see the "$" in the field.
+- Haven't got any ideas about which animation is appropriate for the app
 
 ## License
 

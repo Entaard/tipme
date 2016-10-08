@@ -58,6 +58,7 @@
                                 <connections>
                                     <action selector="calculateTip:" destination="BYZ-38-t0r" eventType="editingChanged" id="88l-Ug-hYL"/>
                                     <action selector="removePreviousBill:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="gPy-BR-yGr"/>
+                                    <action selector="storeCurrentBill:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="cc6-SL-xSL"/>
                                 </connections>
                             </textField>
                             <view contentMode="scaleToFill" misplaced="YES" id="ask-CW-mM3">

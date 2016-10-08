@@ -28,6 +28,7 @@ class ViewController: UIViewController {
         tipPercentages = defaultTipPercentages
         defaults.set(tipPercentages, forKey: "tips")
         defaults.set(defaultTipPercentages, forKey: "defaultTips")
+        defaults.set(0, forKey: "bill")
         defaults.synchronize()
         
         billField.becomeFirstResponder()
@@ -63,6 +64,9 @@ class ViewController: UIViewController {
 
     
     @IBAction func calculateTip(_ sender: AnyObject) {
+        // clear stored bill if user add new bill
+        defaults.set(0, forKey: "bill")
+        
         // On text change, calculate things
         let bill = Double(billField.text!) ?? 0
         let tip = bill * tipPercentages[tipControl.selectedSegmentIndex]
@@ -72,6 +76,33 @@ class ViewController: UIViewController {
         for price in totalPriceLabels {
             price.text = (total / Double(price.tag)).asLocaleCurrency
         }
+        
+    }
+    
+    @IBAction func storeCurrentBill(_ sender: AnyObject) {
+        // Look for stored bill in local storage
+        let storedBill = defaults.double(forKey: "bill")
+        print(storedBill)
+        var bill:Double = 0
+        if (storedBill != 0) {
+            bill = storedBill
+        } else {
+            // store current bill value to local storage after user end editing
+            // then delete it to 0 after 10 mins (call clearBill())
+            bill = Double(billField.text!) ?? 0
+            defaults.set(bill, forKey: "bill")
+            defaults.synchronize()
+            perform(#selector(clearBill), with: nil, afterDelay: 10 * 60)
+            print(defaults.double(forKey: "bill"))
+        }
+        
+        // reformat bill text
+        billField.text = String.init(format: "%.0f", bill)
+    }
+    
+    func clearBill() -> Void {
+        defaults.set(0, forKey: "bill")
+        print(defaults.double(forKey: "bill"))
     }
     
 }
